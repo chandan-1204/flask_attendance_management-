@@ -36,7 +36,7 @@ header h1::after {
     left: 0;
     width: 40px;
     height: 3px;
-    background: #6ed6ff;
+    background: #04b8ff;
     border-radius: 2px;
 }
 
@@ -51,7 +51,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(17, 126, 243, 0.85);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -77,7 +77,7 @@ header nav ul li a::before {
 }
 
 header nav ul li a:hover {
-    color: #ffffff;
+    color: #00fbff;
     background: rgba(255, 255, 255, 0.12);
     transform: translateY(-1px);
 }
@@ -99,9 +99,9 @@ header nav ul li:last-child a {
 }
 
 header nav ul li:last-child a:hover {
-    background: #ffffff;
+    background: #00fff7;
     color: #2563eb;
-    border-color: #ffffff;
+    border-color: #0051ff;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
