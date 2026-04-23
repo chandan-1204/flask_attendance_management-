@@ -19,12 +19,20 @@ def home():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
 @app.route("/signup",methods=["POST","GET"])
 def signup():
     if request.method == "POST":
         name = request.form.get("name")
         email = request.form.get("email")
         password = request.form.get("password")
+        db_user=User.query.filter_by(email=email).first()
+        if db_user:
+            return render_template("signup.html",error="Email already exists")
+        db_user=User.query.filter_by(name=name).first()
+        if db_user: 
+            return render_template("signup.html",error="Username already exists")
+        
         user=User(name=name,email=email,password=password)
         db.session.add(user)
         db.session.commit()
